@@ -1,0 +1,26 @@
+{
+  "name": "shippeddatadashboard",
+  "version": "1.0.0",
+  "description": "Dashboard app that will server as a frontend to read and display shipped order data stored in the Neon database",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node test/database-test.js",
+    "test-db": "node test/database-test.js"
+  },
+  "keywords": [
+    "dashboard",
+    "neon",
+    "postgresql",
+    "orders",
+    "shipped"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulfilled Orders Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fulfilled Orders</h1>
+            <div class="status-indicator">
+                <span id="connection-status" class="status-disconnected">Connecting...</span>
+                <span id="last-updated"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="refresh-btn" class="btn btn-primary">
+                    <span class="btn-text">Refresh Data</span>
+                    <span class="loading-spinner" style="display: none;">⟳</span>
+                </button>
+                <div class="order-count">
+                    <span id="order-count">0</span> orders found
+                </div>
+            </div>
+
+            <div id="error-message" class="error-message" style="display: none;"></div>
+
+            <div class="table-container">
+                <table id="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Order Number</th>
+                            <th>Customer Name</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Amount</th>
+                            <th>Shipped Date</th>
+                            <th>Tracking Number</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <div class="loading-spinner-large">⟳</div>
+                <p>Loading orders...</p>
+            </div>
+
+            <div id="no-data" class="no-data" style="display: none;">
+                <p>No shipped orders found.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Shipped Data Dashboard</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
